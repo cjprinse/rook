@@ -71,7 +71,7 @@ func newS3Agent(accessKey, secretKey, endpoint string, debug bool, tlsCert []byt
 			WithRegion(cephRegion).
 			WithCredentials(credentials.NewStaticCredentials(accessKey, secretKey, "")).
 			WithEndpoint(endpoint).
-			WithS3ForcePathStyle(true).
+			WithS3ForcePathStyle(false).
 			WithMaxRetries(5).
 			WithDisableSSL(!tlsEnabled).
 			WithHTTPClient(&client).
